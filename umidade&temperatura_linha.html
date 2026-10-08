@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+        <canvas id="chartjs"></canvas>
+    </div>
+    <div>
+        <canvas id="chartjs2"></canvas>
+    </div>
+</body>
+</html>
+<script>
+    const grafico = document.getElementById ('chartjs');
+
+    new Chart (grafico, {
+        type: 'bar',
+        data: {
+            labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+            datasets: [
+                {
+                label: 'Umidade',
+                data: [80, 82, 80, 85, 80, 83],
+                borderWidth: 3,
+                borderColor: 'blue',
+            },
+        ]
+        },
+        options: {}
+    });
+</script>
+<script>
+    const grafico2 = document.getElementById ('chartjs2');
+
+    new Chart (grafico2, {
+        type: 'bar',
+        data: {
+            labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+            datasets: [
+                {
+                type: 'line',
+                label: 'Temperatura (*C)',
+                data: [30, 29, 28, 25, 22, 23],
+                borderWidth: 2,
+                borderColor: 'red'
+            },
+        ]
+        },
+        options: {}
+    });
+</script>
